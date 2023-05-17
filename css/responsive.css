@@ -1,0 +1,272 @@
+/*
+    ベーカリーのWebサイト(responsive.css)
+    作成者：栗田幸一(Koichi Kurita)
+    作成日：2023.2.9
+    修正日：2023.2.15
+*/
+
+/*
+    最新のブレイクポイントについては下記参照
+    https://caroa.jp/design/article/IuBFNKUn
+
+    ※ iPhone XRが画面幅は414pxでGoogle Chromeではレスポンシブデザインに切り替わらないので、
+    スマホの画面サイズは最大415pxとする
+*/
+
+/* タブレット用(画面幅：600px~834px) */
+@media (max-width: 834px) {
+    /* 全体 */
+    body {
+        width: 100%;
+    }
+
+    /* ヘッダー */
+    #top {
+        height: 510px;
+    }
+
+    /* ロゴ画像 */
+    .logo-image-wrapper {
+        width: 50%;
+        height: 80px;
+    }
+
+    /* ナビゲーション領域 */
+    nav {
+        width: 100%;
+        height: 100px;
+        position: absolute;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100px;
+    }
+
+    nav ul li {
+        flex: auto;
+        width: 50%;
+    }
+
+    /* コンテンツ領域 */
+    #contents {
+        width: 85%;
+    }
+
+    /* 紹介文 */
+    #introduction p {
+        font-size: 18px;
+    }
+
+    /* コンテンツタイトル領域 */
+    .contents-title {
+        width: 70%;
+    }
+
+    /* INFORMATION */
+    #information ul {
+        width: 70%;
+    }
+
+    /* MENU */
+    .menu-item-box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+    }
+
+    /* CONTACT */
+    #contact form {
+        width: 60%;
+    }
+}
+
+
+/* スマホ用(画面幅：360px~415px) */
+@media (max-width: 415px) {
+    /* 全体 */
+    body {
+        width: 100%;
+    }
+
+    /* ヘッダー */
+    #top {
+        position: relative;
+        height: auto;
+    }
+
+    /* ロゴ画像 */
+    #logo {
+        height: 245px;
+    }
+
+    .logo-image-wrapper {
+        width: 77.12%;
+        height: 58px;
+    }
+
+    /* ナビゲーション領域 */
+    /* ナビゲーション領域は初期状態で非表示 */
+    nav {
+        display: none;
+        height: 200px;
+        position: fixed;
+        z-index: 999;
+        top: 40px;
+    }
+
+    nav ul {
+        width: 100%;
+        height: 200px;
+        flex-direction: column;
+    }
+
+    nav ul li{
+        width: 100%;
+    }
+
+    /* スマホ画面の状態でスクロールした場合, ヘッダーの高さ分, ナビゲーションメニュー固定位置を下げる */
+    #top .navfixed {
+        top: 40px;
+    }
+
+    /* スマホ用メニュー */
+    #narrow-window-menu {
+        display: block;
+        width: 100%;
+        height: 40px;
+        background-color: #ffffff;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+    }
+
+    .menu-logo-image-wrapper {
+        display: flex;
+        width: 59.70%;
+        height: 40px;
+        float: left;
+    }
+
+    #narrow-window-menu img {
+        width: 100%;
+    }
+
+    .menu-icon-wrapper {
+        width: 13.33%;
+        height: 40px;
+        background-color: #E7A700;
+        float: right;
+    }
+
+    .menu-icon {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        color: #ffffff;
+        font-size: 31px;
+        font-family: 'Hiragino Kaku Gothic ProN';
+        line-height: 40px;
+        text-align: center;
+    }
+
+    /* コンテンツ領域 */
+    #contents {
+        width: 100%;
+    }
+
+    /* 紹介文 */
+    #introduction {
+        margin: 20px 0;
+    }
+
+    #introduction p {
+        font-size: 13px;
+    }
+
+    /* コンテンツタイトル領域 */
+    .contents-title {
+        width: 100%;
+        min-width: auto;
+        padding-bottom: 0;
+        margin: 0 auto 20px auto;
+    }
+
+    /* INFORMATION */
+    #information ul {
+        width: 85%;
+    }
+
+    #information ul li {
+        height: 28px;
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    #information ul li:last-child a {
+        font-size: 12px;
+    }
+
+    /* MENU */
+    .menu-item-box {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .menu-item {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .menu-item:last-child {
+        margin: 0 auto;
+    }
+
+    .menu-item h2 {
+        height: 50px;
+        line-height: 50px;
+        top: 213px;
+    }
+
+    .menu-image-wrapper {
+        height: 262.64px;
+        margin-bottom: 15px;
+    }
+
+    .menu-image-wrapper img {
+        height: 262.64px;
+    }
+
+    .menu-item figcaption {
+        font-size: 18px;
+    }
+
+    /* ACCESS */
+    #access p {
+        font-size: 20px;
+    }
+
+    #access iframe {
+        width: 100%;
+        height: 292px;
+    }
+
+    /* CONTACT */
+    #contact form {
+        width: 95%;
+    }
+
+    /* ページ上部に戻るボタン */
+    #top-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        top: 70%;
+        left: 80%;
+    }
+
+    #top-btn a {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+}

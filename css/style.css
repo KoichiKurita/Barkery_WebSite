@@ -1,0 +1,429 @@
+/*
+    ベーカリーのWebサイト(style.css)
+    作成者：栗田幸一(Koichi Kurita)
+    作成日：2023.2.9
+    修正日：2023.2.14
+*/
+
+/* PCの画面幅：1920px */
+
+/* 全体 */
+body {
+    background-color: #EAB22239;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ヘッダー領域 */
+header{
+    width: 100%;
+    height: 460px;
+}
+
+#top {
+    width: 100%;
+}
+
+
+/* ロゴ画像 */
+#logo {
+    width: 100%;
+    height: 410px;
+    background-image: url(../images/breads.png);
+    background-size: cover;
+    position: relative;
+}
+
+.logo-image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 33.33%;
+    height: 120px;
+    background: #ffffff;
+    border-radius: 79px;
+}
+
+.logo-image-wrapper img {
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+/* ナビゲーション領域 */
+nav {
+    background-color: #D68C00;
+    height: 50px;
+    width: 100%;
+    position: absolute; /* position: absolute;がない場合、スクロールしてから上部に固定したときにカクッと動いてしまう */
+}
+
+nav ul {
+    display: flex;
+    overflow: hidden;
+    list-style-type: none;
+    width: 60%;
+    height: 50px;
+    padding-left: 0;
+    margin: 0 auto;
+}
+
+nav ul li {
+    float: left;
+    background-color: #e7a700;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ナビゲーションバーはホバー時に背景色変更 */
+nav ul li:hover{
+    background-color: #fcbc12;
+}
+
+nav ul li a{
+    display: block;
+    height: 50px;
+    color: #FFFFFF;
+    font-family: '游ゴシック体';
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+}
+
+/* スクロールしたら、ナビゲーションバーを固定する */
+#top .navfixed {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+
+/* スマホ用メニューは非表示 */
+#narrow-window-menu {
+    display: none;
+}
+
+
+/* コンテンツ領域 */
+#contents {
+    width: 66.67%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+
+/* 紹介文 */
+#introduction {
+    margin: 60px 0;
+}
+
+#introduction p {
+    color: #707070;
+    font-family: '游ゴシック体';
+    font-size:16px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+/* コンテンツタイトル領域 */
+.contents-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contents-title {
+    color: #e7a700;
+    font-family: '游ゴシック体';
+    font-weight: bold;
+    font-size: 30px;
+    width: 65%;
+    max-width: 480px;
+    min-width: 450px;
+    padding-bottom: 5px;
+    margin: 0 auto 30px auto;
+    border-bottom: #D69B00 2px solid;
+    text-align: center;
+}
+
+
+/* INFORMATION */
+#information {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+#information ul {
+    list-style-type: none;
+    max-width: 450px;
+    width: 100%;
+    padding-left: 0;
+    margin: 0 auto;
+}
+
+#information ul li {
+    text-align: left;
+    padding-left: 1em;
+    color: #000000;
+    font-family: '游ゴシック体';
+    font-size: 20px;
+}
+
+#information ul li:last-child {
+    margin-top: 5px;
+    text-align: right;
+}
+
+#information ul li a {
+    padding-left: 1em;
+}
+
+#information ul li:last-child a {
+    color: #838383;
+    font-size: 18px;
+}
+
+#information ul li a:hover {
+    color: #0000ff;
+}
+
+
+/* MENU */
+#menu {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.menu-item-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+    width: 87.5%;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+}
+
+.menu-item {
+    overflow: hidden;
+}
+
+.menu-item:last-child {
+    margin: 0;
+}
+
+.menu-image-wrapper {
+    width: 100%;
+    height: auto;
+    margin-bottom: 7px;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu-image-wrapper h2 {
+    height: 30px;
+    width: 100%;
+    background-color: #00000069;
+    color: #ffffff;
+    font-family: '游ゴシック体';
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    bottom: 8px;
+    z-index: 100;
+}
+
+.menu-image-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.menu-image-wrapper img:hover {
+    transform: scale(1.3);
+    transition: all 0.5s;
+}
+
+.menu-item figcaption {
+    color: #382000;
+    font-family: '游ゴシック体';
+    font-size: 18px;
+    text-align: justify;
+}
+
+
+/* ACCESS */
+#access {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+#access p {
+    color: #6d5b44;
+    font-family: '游ゴシック体';
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#access iframe {
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+
+/* CONTACT */
+#contact {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#contact form {
+    width: 47.5%;
+    margin: 0 auto;
+}
+
+#contact .input-wrapper {
+    margin-bottom: 10px;
+}
+
+#contact .input-wrapper p {
+    color: #000000;
+    font-family: '游ゴシック体';
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact .input-wrapper span {
+    display: inline-block;
+    color: #ffffff;
+    font-family: 'Hiragino Kaku Gothic ProN';
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#contact .input-wrapper .required {
+    background-color: #ff0000;
+}
+
+#contact .input-wrapper .optional {
+    background-color: #a8a8a8;
+}
+
+#contact .input-wrapper input {
+    width: 100%;
+    height: 42px;
+    background-color: #f2f2f2;
+    padding: 8px 15px;
+    margin-bottom: 42px;
+    border-radius: 8px;
+    line-height: 42px;
+}
+
+#contact .input-wrapper::placeholder {
+    color: #b1b1b1;
+    font-family: 'Hiragino Kaku Gothic ProN';
+    font-size: 18px;
+}
+
+#contact .input-wrapper textarea {
+    resize: none;
+    width: 100%;
+    height: 210px;
+    background-color: #f2f2f2;
+    padding: 8px 15px;
+    margin-bottom: 42px;
+    border-radius: 8px;
+    line-height: 2.0;
+}
+
+#contact .button {
+    display: block;
+    width: 31.6%;
+    height: 40px;
+    margin: 0 auto;
+    color: white;
+    font-family: '游ゴシック体';
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing: 0.8em;
+    text-indent: 1em;
+    text-align: center;
+    background-color: #ff7777;
+    border-radius: 8px;
+}
+
+#contact .button:hover {
+    background-color: #ffa5a5;
+}
+
+
+/* ページ上部に戻るボタン */
+#top-btn {
+    display: none;
+    width: 80px;
+    height: 80px;
+    background-color: #e7a000;
+    border-radius: 40px;
+    position: fixed;
+    z-index: 999;
+    top: 85%;
+    left: 85%;
+}
+
+#top-btn a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#top-btn:hover {
+    background-color: #ffca41;
+}
+
+
+/* フッター */
+footer {
+    background-color: #d68c00;
+    width: 100%;
+    height: 50px;
+}
+
+footer p {
+    color: #ffffff;
+    font-family: '游ゴシック体';
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}

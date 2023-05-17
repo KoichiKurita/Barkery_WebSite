@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<!--
+    ベーカリーのWebサイト(index.html)
+    作成者：栗田幸一(Koichi Kurita)
+    作成日：2023.2.9
+-->
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Links Bakery</title>
+        <!-- リセットCSS(ress) -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <!-- 作成したCSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- ファビコン -->
+        <link rel="icon" href="images/favicon.ico">
+    </head>
+
+    <body>
+        <!-- ヘッダー領域 -->
+        <header id="top">
+            <!-- スマホ画面用ヘッダーとハンバーガーメニュー -->
+            <div id="narrow-window-menu">
+                <!-- ロゴ画像 -->
+                <div class="menu-logo-image-wrapper">
+                    <img src="images/logo.png" alt="リンクスベーカリー">
+                </div>
+
+                <!-- アイコン -->
+                <div class="menu-icon-wrapper">
+                    <p class="menu-icon">≡</p>
+                </div>
+            </div>
+
+            <!-- 以下はフルスクリーン向け -->
+            <!-- ロゴ画像 -->
+            <div id="logo">
+                <div class="logo-image-wrapper">
+                    <img src="images/logo.png" alt="リンクスベーカリー">
+                </div>
+            </div>
+
+            <!-- ナビゲーションバー -->
+            <nav>
+                <ul>
+                    <li><a href="#">TOP</a></li>
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">ACCESS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- コンテンツ領域 -->
+        <main id="contents">
+            <!-- 紹介文 -->
+            <div id="introduction">
+                <p>リンクスベーカリーでは、みなさんが笑顔になるパンを毎日ひとつひとつ丁寧に焼いています。<br>
+                    テイクアウトだけでなく、店内のイートインスペースでも、焼きたてのパンをお召し上がりいただけます♪</p>
+            </div>
+
+            <!-- 最新情報 -->
+            <div id="information">
+                <h1 class="contents-title">INFORMATION</h1>
+                <div class="contents-wrapper">
+                    <ul>
+                        <li><time datetime="2021-07-01">2021/07/01</time><a href="#">お知らせタイトル</a></li>
+                        <li><time datetime="2021-07-01">2021/07/01</time><a href="#">インフォメーションタイトル</a></li>
+                        <li><time datetime="2021-07-01">2021/07/01</time><a href="#">サイトをリニューアルしました</a></li>
+                        <li><a href="#">MORE…</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MENU -->
+            <div id="menu">
+                <h1 class="contents-title">MENU</h1>
+                <div class="contents-wrapper">
+                    <div class="menu-item-box">
+                        <figure class="menu-item">
+                            <div class="menu-image-wrapper">
+                                <h2>あんぱん</h2>
+                                <img src="images/anpan.png" alt="あんぱん">
+                            </div>
+                            <figcaption>ふんわりとしたパン生地に、昔ながらの甘めで温厚な味わいのあんこをぎっしりと詰めました。</figcaption>
+                        </figure>
+
+                        <figure class="menu-item">
+                            <div class="menu-image-wrapper">
+                                <h2>ベーグル</h2>
+                                <img src="images/bagel.png" alt="ベーグル">
+                            </div>
+                            <figcaption>北海道産の全粒強力粉を使用した、しっとりもちもちで食べごたえのあるベーグルです。</figcaption>
+                        </figure>
+
+                        <figure class="menu-item">
+                            <div class="menu-image-wrapper">
+                                <h2>カンパーニュ</h2>
+                                <img src="images/campagne.png" alt="カンパーニュ">
+                            </div>
+                            <figcaption>ずっしりとした重量感と酸味のある独特な味わい。スープに浸して食べるとおいしいハードブレッドです。</figcaption>
+                        </figure>
+
+                        <figure class="menu-item">
+                            <div class="menu-image-wrapper">
+                                <h2>クロワッサン</h2>
+                                <img src="images/croissant.png" alt="クロワッサン">
+                            </div>
+                            <figcaption>国産小麦とバターを贅沢に使用したクロワッサンです。噛むたびにバターの香りが口いっぱいに広がります。</figcaption>
+                        </figure>
+
+                        <figure class="menu-item">
+                            <div class="menu-image-wrapper">
+                                <h2>エピ</h2>
+                                <img src="images/epi.png" alt="エピ">
+                            </div>
+                            <figcaption>フランス語で「麦の穂」という意味で、皮がパリッと歯触りのいい食感のパンです。</figcaption>
+                        </figure>
+
+                        <figure class="menu-item">
+                            <div class="menu-image-wrapper">
+                                <h2>メロンパン</h2>
+                                <img src="images/melonpan.png" alt="メロンパン">
+                            </div>
+                            <figcaption>外はカリカリ、なかはふんわりとした柔らかさが相性バッチリ。程よい甘さで年齢を問わず人気です。</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- アクセス -->
+            <div id="access">
+                <h1  class="contents-title">ACCESS</h1>
+                <div class="contents-wrapper">
+                    <p>千葉県柏市中央町2-1</p>
+                    <!-- google map 埋め込み-->
+                    <!-- 倍率調整 !4f13.5 → !4f25 -->
+                    <iframe id="Google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d808.3892136319816!2d139.9714918292138!3d35.85986829875957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f25!3m3!1m2!1s0x60189cddf854bbf5%3A0x5fec480120978fad!2z5p-P44K744Oz44K_44O844OT44Or!5e0!3m2!1sja!2sjp!4v1674711637261!5m2!1sja!2sjp" width="650" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- お問い合わせ -->
+            <div id="contact">
+                <h1 class="contents-title">CONTACT</h1>
+                <div class="contents-wrapper">
+                    <form action="#" name="contact-form">
+                        <div class="input-wrapper">
+                            <p><label for="name"><span class="required">必須</span>氏名</label></p>
+                            <input type="text" id="name" name="name" placeholder="例）リンクス太郎" required>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <p><label for="phonetic"><span class="required">必須</span>フリガナ</label></p>
+                            <input type="text" id="phonetic" name="phonetic" placeholder="例）リンクスタロウ" required>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <p><label for="tel"><span class="optional">任意</span>電話番号</label></p>
+                            <input type="tel" id="tel" name="tel" placeholder="例）080-0000-0000">
+                        </div>
+
+                        <div class="input-wrapper">
+                            <p><label for="email"><span class="required">必須</span>メールアドレス</label></p>
+                            <input type="email" id="email" name="email" placeholder="例）links@sample.com" required>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <p><label for="message"><span class="required">必須</span>問い合わせ内容</label></p>
+                            <textarea name="message" id="message" cols="" rows="" required></textarea>
+                        </div>
+
+                        <input type="submit" class="button" value="送信">
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- ページ上部に戻るボタン -->
+        <div id="top-btn">
+            <a href="#top">^</a>
+        </div>
+
+        <!-- フッター領域 -->
+        <footer>
+            <p id="copyright"><small>&copy; Links Bakery 2021</small></p>
+        </footer>
+
+        <!-- JavaScript(jQuery) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
